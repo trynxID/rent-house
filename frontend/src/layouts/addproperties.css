@@ -1,0 +1,103 @@
+.property-form {    
+    padding: 100px;
+    padding-top: 0;    
+}
+
+.property-form input {
+    border-radius: 5px;
+    border: 1px solid #b3b0b0;
+}
+
+.property-form textarea {
+    border-radius: 5px;
+    border: 1px solid #b3b0b0;
+}
+
+.property-form .item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.property-form .item .size {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-form .item .size label {    
+    width: 200px;
+}
+
+.property-form .item select {
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #b3b0b0;    
+}
+
+.property-form .item-row {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;    
+}
+
+.property-form .item-row .location {
+    display: flex;    
+    flex-direction: column;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.property-form .item-row label {    
+    margin-right: 21px;
+}
+
+.property-form .item-row input {    
+    margin-right: 5px;
+}
+
+.property-form .item-select {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.property-form .item-select label {
+    margin-right: 10px;    
+}
+
+.property-form .item-select select {
+    width: 200px;
+    border-radius: 5px;    
+    border: 1px solid #b3b0b0;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.property-form .item-check {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.property-form .item-check label {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.property-form .item-check input[type="checkbox"] {
+    height: 20px;
+    width: 20px;    
+}
+
+.property-form .item label{
+    width: 80px;
+}
+
+.property-form .item textarea {    
+    height: 10rem;
+}
+
+.property-form button:hover {
+    background-color: var(--secondary-color);
+}

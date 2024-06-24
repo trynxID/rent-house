@@ -1,0 +1,39 @@
+.user-form {
+  padding: 100px;
+  padding-top: 0;
+}
+
+.user-form input {
+  border-radius: 5px;
+  border: 1px solid #b3b0b0;
+}
+
+.user-form .item {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.user-form .item-role {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.user-form .item-role select {
+  border: 1px solid #b3b0b0;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+
+.user-form .item select {
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #b3b0b0;
+}
+
+.user-form .item label {
+  width: 130px;
+}
