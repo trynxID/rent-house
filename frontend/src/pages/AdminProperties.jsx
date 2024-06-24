@@ -31,11 +31,14 @@ const AdminProperties = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const res = await axios.get("http://localhost:4573/api/properties", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const res = await axios.get(
+          "https://rent-house-henna.vercel.app/api/properties",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         setProperties(res.data);
       } catch (err) {
         console.error(err);
@@ -48,7 +51,7 @@ const AdminProperties = () => {
   const fetchUserData = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:4573/api/users/detail/${userId}`
+        `https://rent-house-henna.vercel.app/api/users/detail/${userId}`
       );
       setUserData(response.data);
     } catch (error) {
@@ -70,7 +73,7 @@ const AdminProperties = () => {
       if (result.isConfirmed) {
         try {
           const res = await axios.delete(
-            `http://localhost:4573/api/properties/delete/${id}`,
+            `https://rent-house-henna.vercel.app/api/properties/delete/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,

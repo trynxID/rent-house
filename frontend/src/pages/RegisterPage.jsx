@@ -23,7 +23,7 @@ const RegisterPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4573/api/register/save",
+        "https://rent-house-henna.vercel.app/api/register/save",
         formData
       );
       Swal.fire({

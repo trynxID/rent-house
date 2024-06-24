@@ -14,7 +14,7 @@ const BookingPage = () => {
     const fetchBookings = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4573/api/bookings/user",
+          "https://rent-house-henna.vercel.app/api/bookings/user",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -44,7 +44,7 @@ const BookingPage = () => {
     if (result.isConfirmed) {
       try {
         const res = await axios.delete(
-          `http://localhost:4573/api/bookings/delete/${id}`,
+          `https://rent-house-henna.vercel.app/api/bookings/delete/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

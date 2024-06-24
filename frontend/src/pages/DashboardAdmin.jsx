@@ -30,7 +30,7 @@ const DashboardAdmin = () => {
   const fetchUserData = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:4573/api/users/detail/${userId}`
+        `https://rent-house-henna.vercel.app/api/users/detail/${userId}`
       );
       setUserData(response.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const DashboardAdmin = () => {
     const fetchCount = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4573/api/dashboard/total",
+          "https://rent-house-henna.vercel.app/api/dashboard/total",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -13,7 +13,7 @@ const Recommendation = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4573/api/properties")
+      .get("https://rent-house-henna.vercel.app/api/properties")
       .then((response) => {
         setList(response.data);
       })
@@ -22,7 +22,7 @@ const Recommendation = () => {
       });
 
     axios
-      .get("http://localhost:4573/api/properties/cities")
+      .get("https://rent-house-henna.vercel.app/api/properties/cities")
       .then((response) => {
         const cities = response.data;
         if (cities.length > 0) {
@@ -148,7 +148,7 @@ const Recommendation = () => {
                 <div key={index} className="card" onClick={handleCardClick}>
                   <div className="card-img">
                     <img
-                      src={`http://localhost:4573${images[0]}`}
+                      src={`https://rent-house-henna.vercel.app${images[0]}`}
                       alt={title}
                     />
                     <div className="rating">★ {rating}</div>

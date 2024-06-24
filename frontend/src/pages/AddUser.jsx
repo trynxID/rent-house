@@ -68,7 +68,7 @@ const AddUser = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4573/api/users/add",
+        "https://rent-house-henna.vercel.app/api/users/add",
         formDataToSend,
         {
           headers: {

@@ -116,12 +116,16 @@ const AddProperties = () => {
         });
 
         try {
-          await axios.post("http://localhost:4573/api/properties/add", data, {
-            headers: {
-              "Content-Type": "multipart/form-data",
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          });
+          await axios.post(
+            "https://rent-house-henna.vercel.app/api/properties/add",
+            data,
+            {
+              headers: {
+                "Content-Type": "multipart/form-data",
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+              },
+            }
+          );
           Swal.fire("Berhasil!", "Property berhasil ditambahkan", "success");
           navigate("/admin/properties");
         } catch (err) {

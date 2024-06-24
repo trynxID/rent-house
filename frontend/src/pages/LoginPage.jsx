@@ -14,7 +14,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4573/api/login/auth",
+        "https://rent-house-henna.vercel.app/api/login/auth",
         { email, password }
       );
       const userData = response.data;

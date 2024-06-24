@@ -14,7 +14,7 @@ const AdminBooking = () => {
   const fetchTransactions = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4573/api/transactions",
+        "https://rent-house-henna.vercel.app/api/transactions",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

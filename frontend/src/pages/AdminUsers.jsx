@@ -20,7 +20,9 @@ const AdminUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:4573/api/users");
+      const response = await axios.get(
+        "https://rent-house-henna.vercel.app/api/users"
+      );
       setUsers(response.data);
     } catch (err) {
       console.error(err);
@@ -60,7 +62,7 @@ const AdminUsers = () => {
       if (result.isConfirmed) {
         try {
           const res = await axios.delete(
-            `http://localhost:4573/api/users/delete/${id}`,
+            `https://rent-house-henna.vercel.app/api/users/delete/${id}`,
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,

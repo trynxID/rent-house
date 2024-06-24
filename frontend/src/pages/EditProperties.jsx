@@ -40,7 +40,7 @@ const EditProperties = () => {
     const fetchProperty = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:4573/api/properties/edit/${id}`,
+          `https://rent-house-henna.vercel.app/api/properties/edit/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -105,7 +105,7 @@ const EditProperties = () => {
       if (result.isConfirmed) {
         try {
           const res = await axios.put(
-            `http://localhost:4573/api/properties/update/${id}`,
+            `https://rent-house-henna.vercel.app/api/properties/update/${id}`,
             property,
             {
               headers: {

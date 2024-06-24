@@ -25,7 +25,7 @@ const ProfilePage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:4573/api/users/upload/${userData._id}`,
+        `https://rent-house-henna.vercel.app/api/users/upload/${userData._id}`,
         formData,
         {
           headers: {
@@ -59,7 +59,7 @@ const ProfilePage = () => {
   const handleSaveProfile = async () => {
     try {
       await axios.put(
-        `http://localhost:4573/api/users/update/${userData._id}`,
+        `https://rent-house-henna.vercel.app/api/users/update/${userData._id}`,
         userData,
         {
           headers: {
@@ -86,7 +86,7 @@ const ProfilePage = () => {
               <div className="profile-image">
                 {userData.img_url ? (
                   <img
-                    src={`http://localhost:4573${userData.img_url}`}
+                    src={`https://rent-house-henna.vercel.app${userData.img_url}`}
                     alt="Profile"
                     width="300"
                   />

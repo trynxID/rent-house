@@ -28,11 +28,14 @@ const AdminBooking = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://localhost:4573/api/bookings", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const response = await axios.get(
+        "https://rent-house-henna.vercel.app/api/bookings",
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       setBookings(response.data);
     } catch (err) {
       console.error(err);
@@ -78,7 +81,7 @@ const AdminBooking = () => {
       if (result.isConfirmed) {
         try {
           await axios.put(
-            `http://localhost:4573/api/bookings/cancel/${bookingId}`,
+            `https://rent-house-henna.vercel.app/api/bookings/cancel/${bookingId}`,
             {},
             {
               headers: {
@@ -103,7 +106,7 @@ const AdminBooking = () => {
   const handleAcceptBooking = async (bookingId) => {
     try {
       const response = await axios.post(
-        `http://localhost:4573/api/transactions/accept/${bookingId}`,
+        `https://rent-house-henna.vercel.app/api/transactions/accept/${bookingId}`,
         {},
         {
           headers: {

@@ -23,7 +23,7 @@ const NavbarProperty = () => {
   const fetchUserData = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:4573/api/users/detail/${userId}`
+        `https://rent-house-henna.vercel.app/api/users/detail/${userId}`
       );
       const user = response.data;
       setUserData(user);
@@ -35,7 +35,9 @@ const NavbarProperty = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.put(`http://localhost:4573/api/users/logout/${userData._id}`);
+      await axios.put(
+        `https://rent-house-henna.vercel.app/api/users/logout/${userData._id}`
+      );
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       navigate("/");
@@ -65,7 +67,7 @@ const NavbarProperty = () => {
                   title={
                     <>
                       <img
-                        src={`http://localhost:4573${profileImage}`}
+                        src={`https://rent-house-henna.vercel.app${profileImage}`}
                         alt="Profile"
                         width="30"
                         height="30"

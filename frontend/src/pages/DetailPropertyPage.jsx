@@ -21,7 +21,7 @@ const DetailPropertyPage = () => {
     const fetchProperty = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4573/api/properties/detail/${id}`,
+          `https://rent-house-henna.vercel.app/api/properties/detail/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -53,7 +53,7 @@ const DetailPropertyPage = () => {
     const userId = user.id;
     try {
       const response = await axios.post(
-        `http://localhost:4573/api/bookings/add`,
+        `https://rent-house-henna.vercel.app/api/bookings/add`,
         {
           propertyId: id,
           start_date: startDate,

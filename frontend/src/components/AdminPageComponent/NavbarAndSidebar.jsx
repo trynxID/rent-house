@@ -32,7 +32,7 @@ const NavbarAndSidebar = () => {
   const fetchUserData = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:4573/api/users/detail/${userId}`
+        `https://rent-house-henna.vercel.app/api/users/detail/${userId}`
       );
       setUserData(response.data);
       localStorage.setItem("userData", JSON.stringify(response.data));
@@ -43,7 +43,9 @@ const NavbarAndSidebar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.put(`http://localhost:4573/api/users/logout/${userData._id}`);
+      await axios.put(
+        `https://rent-house-henna.vercel.app/api/users/logout/${userData._id}`
+      );
       localStorage.removeItem("token");
       localStorage.removeItem("user");
       localStorage.removeItem("userData");
@@ -75,7 +77,7 @@ const NavbarAndSidebar = () => {
                 title={
                   <>
                     <img
-                      src={`http://localhost:4573${userData.img_url}`}
+                      src={`https://rent-house-henna.vercel.app${userData.img_url}`}
                       alt="Profile"
                       width="30"
                       height="30"

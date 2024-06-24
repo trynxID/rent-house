@@ -8,7 +8,7 @@ const Coverage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4573/api/properties")
+      .get("https://rent-house-henna.vercel.app/api/properties")
       .then((response) => {
         const data = response.data;
 
